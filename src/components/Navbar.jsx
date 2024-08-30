@@ -23,14 +23,14 @@ const NavItems = [
 
 const Navbar = () => {
   return (
-    <div className='px-40 pt-8'>
+    <div className='px-36 pt-2'>
       <div className='flex justify-between items-center'>
         {/* --Logo Image-- */}
         <div>
           <Image
             src='/images/taskboard-logo.png'
-            width={70}
-            height={100}
+            width={50}
+            height={50}
             alt='Logo..'
           />
         </div>
