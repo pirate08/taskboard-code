@@ -1,6 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import { FaPlus } from 'react-icons/fa';
+import { GoProjectRoadmap } from 'react-icons/go';
 import ProjectsForm from '@/ui/ProjectsForm';
 import { useDisclosure } from '@chakra-ui/react';
 
@@ -33,11 +34,15 @@ const Sidebar = () => {
             return (
               <li
                 key={index}
-                className={`text-md cursor-pointer py-2 px-2 rounded-md mb-2 ${
+                className={`text-md font-bold cursor-pointer py-2 px-2 rounded-md mb-2 flex items-center gap-1 ${
                   activeProject === project ? 'bg-white' : 'hover:bg-white'
                 }`}
-                onClick={() => handleProjectClick(project)}
-              >
+                onClick={() => handleProjectClick(project)}>
+                {/* --Icon-- */}
+                <span className='text-xl'>
+                  <GoProjectRoadmap />
+                </span>
+                {/* --Name of the project-- */}
                 {project}
               </li>
             );
