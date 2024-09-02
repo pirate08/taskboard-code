@@ -1,7 +1,9 @@
-import { Inter } from 'next/font/google';
+import { Roboto } from 'next/font/google';
 import './globals.css';
+// 1. import `ChakraProvider` component
+import { ChakraProvider } from '@chakra-ui/react';
 
-const inter = Inter({ subsets: ['latin'] });
+const roboto = Roboto({ subsets: ['latin'], weight: ['100', '400', '700'] });
 
 export const metadata = {
   title: 'Taskboard',
@@ -11,7 +13,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang='en'>
-      <body className={inter.className}>{children}</body>
+      <body className={roboto.className}>
+        <ChakraProvider>{children}</ChakraProvider>
+      </body>
     </html>
   );
 }
