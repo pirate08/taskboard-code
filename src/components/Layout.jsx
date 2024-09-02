@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from './Navbar';
 import Sidebar from './Sidebar';
+import HomePage from './HomePage';
 
 const Layout = () => {
   return (
@@ -11,7 +12,9 @@ const Layout = () => {
         {/* Sidebar with fixed width */}
         <Sidebar />
         {/* Content Area */}
-        <div className='flex-grow pt-8 pl-8'>hello</div>
+        <div className='flex-grow py-8 px-6'>
+          <HomePage />
+        </div>
       </div>
     </div>
   );
