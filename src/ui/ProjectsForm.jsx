@@ -42,7 +42,7 @@ const ProjectsForm = ({ isOpen, onClose, addProject }) => {
                 id='projectName'
                 type='text'
                 placeholder='Enter project name'
-                className='w-full px-4 py-2 border rounded'
+                className='w-full px-6 py-2 border rounded'
                 value={projectName}
                 onChange={(e) => setProjectName(e.target.value)}
                 required
